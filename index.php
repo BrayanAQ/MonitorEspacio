@@ -14,8 +14,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, midnightblue 0%, ghostwhite 60%);
-            color: #2c3e50;
+            background: linear-gradient(135deg, #00758f 0%, #f29111 70%);
+            color: #ffffff;
             line-height: 1.6;
             position: relative;
             overflow: hidden;
@@ -57,7 +57,7 @@
         }
 
         .login-container {
-            background: rgba(255,255,255,0.9);
+            background: #00758f;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -72,7 +72,7 @@
 
         .login-subtitle {
             font-size: 14px;
-            color: #555;
+            color: #ffffff;
             margin-bottom: 20px;
         }
 
@@ -109,7 +109,7 @@
         .login-button {
             width: 100%;
             padding: 12px;
-            background: midnightblue;
+            background: #00758f;
             color: white;
             border: none;
             border-radius: 6px;
@@ -123,7 +123,7 @@
 
         .login-footer a {
             font-size: 14px;
-            color: #2c3e50;
+            color: #ffffff;
             text-decoration: none;
         }
 
