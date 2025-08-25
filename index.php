@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-
     <style>
         body {
             margin: 0;
@@ -37,23 +35,6 @@
             font-size: 14px;
             cursor: pointer;
             backdrop-filter: blur(10px);
-        }
-
-        .language-selector-top select:focus {
-            outline: 2px solid #667eea;
-            outline-offset: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .language-selector-top {
-                top: 10px;
-                right: 10px;
-            }
-
-            .language-selector-top select {
-                padding: 6px 8px;
-                font-size: 12px;
-            }
         }
 
         .login-container {
@@ -109,7 +90,7 @@
         .login-button {
             width: 100%;
             padding: 12px;
-            background: #00758f;
+            background: #f29111;
             color: white;
             border: none;
             border-radius: 6px;
@@ -148,7 +129,8 @@
         <p class="login-subtitle">Por favor, ingrese sus credenciales</p>
     </div>
 
-    <form class="login-form" method="POST" action="#">
+    <!-- ✅ Envío directo al login.php -->
+    <form class="login-form" method="POST" action="login.php">
         <div class="form-group">
             <label class="form-label" for="user">Usuario</label>
             <div class="input-with-icon">
@@ -189,9 +171,8 @@
                         id="host"
                         name="host"
                         class="form-input"
-                        placeholder="Ingrese su host"
+                        placeholder="localhost"
                         required
-                        autocomplete="localhost"
                 >
                 <span class="input-icon">🖥️</span>
             </div>
@@ -205,13 +186,13 @@
                         id="database"
                         name="database"
                         class="form-input"
-                        placeholder="Ingrese su base de datos"
+                        placeholder="test"
                         required
-                        autocomplete="database"
                 >
                 <span class="input-icon">🛢️</span>
             </div>
         </div>
+
         <div class="remember-section">
             <div class="checkbox-container">
                 <input type="checkbox" id="remember" name="remember" class="checkbox-input">
@@ -233,34 +214,10 @@
     function changeLanguage(lang) {
         alert("Cambio de idioma a: " + lang);
     }
-    document.querySelector('.login-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const button = document.querySelector('.login-button');
-        const container = document.querySelector('.login-container');
-        button.textContent = 'Iniciando...';
-        container.classList.add('loading');
 
-        const formData = new FormData(this);
-
-        fetch('login.php', {
-            method: 'POST',
-            body: formData
-        })
-            .then(res => res.text())
-            .then(data => {
-                alert(data); // aquí verías el mensaje del PHP (conexión OK o error)
-            })
-            .catch(err => alert("Error: " + err))
-            .finally(() => {
-                button.textContent = 'Iniciar sesión';
-                container.classList.remove('loading');
-            });
-    });
-
-
-    // Auto-focus al campo de usuario al cargar la página
+    // ✅ Auto-focus al campo de usuario
     window.addEventListener('load', function() {
-        document.getElementById('usuario').focus();
+        document.getElementById('user').focus();
     });
 </script>
 </body>

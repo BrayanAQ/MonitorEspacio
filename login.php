@@ -1,4 +1,7 @@
 <?php
+require 'Database.php';
+require 'Auth.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = $_POST['host'];
     $db   = $_POST['database'];
@@ -6,14 +9,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'];
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // Intentar conexión con la BD
+        $database = new Database($host, $db, $user, $pass);
+        $auth = new Auth();
 
-        echo "✅ Conexión exitosa a $db en $host con el usuario $user.";
-        // Aquí podrías redirigir al "dashboard" o cargar datos de la BD
-    } catch (PDOException $e) {
+        // Guardar sesión
+        if ($auth->login($user, $pass, $host, $db)) {
+            header("Location: dashboard.php");
+            exit;
+        } else {
+            echo "❌ Usuario o contraseña incorrectos";
+        }
+
+    } catch (Exception $e) {
         echo "❌ Error de conexión: " . $e->getMessage();
     }
 }
-?>
-
