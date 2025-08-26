@@ -204,7 +204,6 @@ return [
 
     // === OPERACIONES DE DATOS ===
     'insert' => 'Insertar',
-    'select' => 'Seleccionar',
     'update_data' => 'Actualizar',
     'delete_data' => 'Eliminar',
     'truncate' => 'Truncar',
@@ -531,7 +530,6 @@ return [
 // === GRÁFICOS Y ANÁLISIS ===
     'used_space' => 'Espacio Utilizado',
     'free_space' => 'Espacio Libre',
-    'connections' => 'Conexiones',
     'queries_per_second' => 'Consultas/Segundo',
     'buffer_pool_hit_ratio' => 'Ratio de Aciertos del Buffer Pool',
     'slow_queries' => 'Consultas Lentas',
@@ -560,7 +558,6 @@ return [
     'language_russian' => 'Русский',
 
 // === TÉRMINOS ADICIONALES DEL PANEL ===
-    'monitoring' => 'Monitoreo',
     'real_time' => 'Tiempo Real',
     'live_data' => 'Datos en Vivo',
     'auto_refresh' => 'Auto Actualizar',
@@ -571,7 +568,6 @@ return [
     'system_health' => 'Salud del Sistema',
     'resource_usage' => 'Uso de Recursos',
     'disk_usage' => 'Uso de Disco',
-    'memory_usage' => 'Uso de Memoria',
     'cpu_usage' => 'Uso de CPU',
     'network_usage' => 'Uso de Red',
     'connection_pool' => 'Grupo de Conexiones',
@@ -670,4 +666,62 @@ return [
 // === UNIDADES ADICIONALES ===
     'tables_count' => 'tablas',
     'mb_per_day' => 'MB/día',
+    // === TRADUCCIONES FALTANTES PARA AGREGAR A es.php ===
+
+// === INDICADORES DE ESTADO ===
+    'not_available' => 'N/D',
+    'status_ok' => 'OK',
+    'status_good' => 'Bueno',
+    'status_fair' => 'Regular',
+    'status_low' => 'Bajo',
+    'status_high' => 'Alto',
+    'status_some' => 'Algunos',
+    'status_none' => 'Ninguno',
+
+// === MÉTRICAS DE RENDIMIENTO ===
+    'real_time_server_analysis' => 'Análisis de rendimiento del servidor en tiempo real',
+    'average_query_rate' => 'Tasa promedio de consultas',
+    'memory_efficiency' => 'Eficiencia de memoria',
+    'connection_usage' => 'Uso de conexiones',
+    'total_slow_queries' => 'Total de consultas lentas',
+    'key_cache_hit_ratio' => 'Proporción de aciertos de caché de claves',
+    'index_cache_efficiency' => 'Eficiencia de caché de índices',
+    'temp_tables_on_disk' => 'Tablas temporales en disco',
+    'memory_vs_disk_usage' => 'Uso de memoria vs disco',
+    'network_traffic' => 'Tráfico de red',
+    'total_mb_transferred' => 'Total de MB transferidos',
+    'running_threads' => 'Hilos en ejecución',
+    'active_query_threads' => 'Hilos de consulta activos',
+
+// === INDICADORES DE SALUD ===
+    'health_indicator_query_cache' => 'Caché de Consultas',
+    'health_indicator_buffer_pool' => 'Pool de Búferes',
+    'health_indicator_connections' => 'Conexiones',
+    'health_indicator_slow_queries' => 'Consultas Lentas',
+    'health_indicator_table_locks' => 'Bloqueos de Tabla',
+    'health_indicator_temp_tables' => 'Tablas Temporales',
+    'health_indicator_key_reads' => 'Lecturas de Clave',
+    'health_indicator_sort_merge' => 'Combinación de Ordenación',
+
+// === TÍTULOS DE GRÁFICOS ===
+    'query_types_distribution' => 'Distribución de Tipos de Consulta',
+    'hit_ratios_comparison' => 'Comparación de Proporciones de Aciertos',
+    'connection_thread_analysis' => 'Análisis de Conexiones e Hilos',
+
+// === ETIQUETAS DE GRÁFICOS ===
+    'buffer_pool' => 'Pool de Búferes',
+    'key_cache' => 'Caché de Claves',
+    'table_cache' => 'Caché de Tablas',
+    'created' => 'Creadas',
+    'max_allowed' => 'Máximo Permitido',
+    'connections_and_threads' => 'Conexiones e Hilos',
+
+// === INFORMACIÓN DE TABLAS ===
+    'tables_found' => 'Tablas encontradas',
+
+// === INFORMACIÓN ADICIONAL DE LA BASE DE DATOS ===
+
+// === UNIDADES ===
+
+// === ACTUALIZAR ===
 ];

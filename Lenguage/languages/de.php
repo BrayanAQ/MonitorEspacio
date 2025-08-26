@@ -671,4 +671,66 @@ return [
 // === ZUSÄTZLICHE EINHEITEN ===
     'tables_count' => 'Tabellen',
     'mb_per_day' => 'MB/Tag',
+    // === FEHLENDE ÜBERSETZUNGEN ZUM HINZUFÜGEN IN de.php ===
+
+// === STATUSINDIKATOREN ===
+    'not_available' => 'k. A.', // oder "n/v" (nicht verfügbar)
+    'status_ok' => 'OK',
+    'status_good' => 'Gut',
+    'status_fair' => 'Mittel',
+    'status_low' => 'Niedrig',
+    'status_high' => 'Hoch',
+    'status_some' => 'Einige',
+    'status_none' => 'Keine',
+
+// === LEISTUNGSMETRIKEN ===
+    'real_time_server_analysis' => 'Echtzeit-Serverleistungsanalyse',
+    'average_query_rate' => 'Durchschnittliche Abfragerate',
+    'memory_efficiency' => 'Speichereffizienz',
+    'connection_usage' => 'Verbindungsnutzung',
+    'total_slow_queries' => 'Langsame Abfragen gesamt',
+    'key_cache_hit_ratio' => 'Key Cache Trefferquote',
+    'index_cache_efficiency' => 'Index-Cache-Effizienz',
+    'temp_tables_on_disk' => 'Temporäre Tabellen auf Festplatte',
+    'memory_vs_disk_usage' => 'Speicher- vs. Festplattennutzung',
+    'network_traffic' => 'Netzwerkverkehr',
+    'total_mb_transferred' => 'Übertragene MB gesamt',
+    'running_threads' => 'Laufende Threads',
+    'active_query_threads' => 'Aktive Abfragethreads',
+
+// === STATUSINDIKATOREN (HEALTH) ===
+    'health_indicator_query_cache' => 'Abfrage-Cache',
+    'health_indicator_buffer_pool' => 'Buffer-Pool',
+    'health_indicator_connections' => 'Verbindungen',
+    'health_indicator_slow_queries' => 'Langsame Abfragen',
+    'health_indicator_table_locks' => 'Tabellensperren',
+    'health_indicator_temp_tables' => 'Temporäre Tabellen',
+    'health_indicator_key_reads' => 'Key-Reads',
+    'health_indicator_sort_merge' => 'Sort-Merge',
+
+// === DIAGRAMMTITEL ===
+    'query_types_distribution' => 'Verteilung der Abfragetypen',
+    'hit_ratios_comparison' => 'Trefferquoten-Vergleich',
+    'connection_thread_analysis' => 'Verbindungs- & Thread-Analyse',
+
+// === DIAGRAMMBESCHRIFTUNGEN ===
+    'buffer_pool' => 'Buffer-Pool',
+    'key_cache' => 'Key-Cache',
+    'table_cache' => 'Table-Cache',
+    'connected' => 'Verbunden',
+    'created' => 'Erstellt',
+    'max_allowed' => 'Max. erlaubt',
+    'connections_and_threads' => 'Verbindungen & Threads',
+
+// === TABELLENINFO ===
+    'tables_found' => 'Gefundene Tabellen',
+
+// === ZUSÄTZLICHE DATENBANKINFORMATIONEN ===
+    'current_connections' => 'Aktive Datenbankverbindungen',
+
+// === EINHEITEN ===
+    'mb' => 'MB',
+
+// === AKTUALISIEREN ===
+    'refresh_data' => 'Daten aktualisieren',
 ];

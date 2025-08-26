@@ -671,4 +671,66 @@ return [
 // === 附加单位 ===
     'tables_count' => '张表',
     'mb_per_day' => 'MB/天',
+    // === 需要添加到 zh.php 的缺失翻译 ===
+
+// === 状态指示器 ===
+    'not_available' => '不适用', // 或 '无可用数据' / 'N/A'
+    'status_ok' => '正常',
+    'status_good' => '良好',
+    'status_fair' => '一般',
+    'status_low' => '低',
+    'status_high' => '高',
+    'status_some' => '部分',
+    'status_none' => '无',
+
+// === 性能指标 ===
+    'real_time_server_analysis' => '服务器实时性能分析',
+    'average_query_rate' => '平均查询率',
+    'memory_efficiency' => '内存效率',
+    'connection_usage' => '连接使用率',
+    'total_slow_queries' => '慢查询总数',
+    'key_cache_hit_ratio' => '键缓存命中率',
+    'index_cache_efficiency' => '索引缓存效率',
+    'temp_tables_on_disk' => '磁盘临时表',
+    'memory_vs_disk_usage' => '内存与磁盘使用情况',
+    'network_traffic' => '网络流量',
+    'total_mb_transferred' => '总传输MB数',
+    'running_threads' => '运行中的线程数',
+    'active_query_threads' => '活动查询线程数',
+
+// === 健康指标 ===
+    'health_indicator_query_cache' => '查询缓存',
+    'health_indicator_buffer_pool' => '缓冲池',
+    'health_indicator_connections' => '连接数',
+    'health_indicator_slow_queries' => '慢查询',
+    'health_indicator_table_locks' => '表锁',
+    'health_indicator_temp_tables' => '临时表',
+    'health_indicator_key_reads' => '键读取',
+    'health_indicator_sort_merge' => '排序合并',
+
+// === 图表标题 ===
+    'query_types_distribution' => '查询类型分布',
+    'hit_ratios_comparison' => '命中率对比',
+    'connection_thread_analysis' => '连接与线程分析',
+
+// === 图表标签 ===
+    'buffer_pool' => '缓冲池',
+    'key_cache' => '键缓存',
+    'table_cache' => '表缓存',
+    'connected' => '已连接',
+    'created' => '已创建',
+    'max_allowed' => '最大允许',
+    'connections_and_threads' => '连接与线程',
+
+// === 表信息 ===
+    'tables_found' => '找到的表',
+
+// === 附加数据库信息 ===
+    'current_connections' => '当前活动数据库连接数',
+
+// === 单位 ===
+    'mb' => 'MB',
+
+// === 刷新 ===
+    'refresh_data' => '刷新数据',
 ];

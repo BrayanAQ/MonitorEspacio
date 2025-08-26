@@ -1,6 +1,6 @@
 <?php
+session_start();
 require 'Database.php';
-require 'Auth.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = $_POST['host'];
@@ -9,19 +9,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'];
 
     try {
-        // Intentar conexión con la BD
+        // Test database connection with provided credentials
         $database = new Database($host, $db, $user, $pass);
-        $auth = new Auth();
+        $pdo = $database->getConnection();
 
-        // Guardar sesión
-        if ($auth->login($user, $pass, $host, $db)) {
-            header("Location: dashboard.php");
-            exit;
-        } else {
-            echo "❌ Usuario o contraseña incorrectos";
+        // If we reach here, connection is successful
+        // Save connection details in session
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $user;
+        $_SESSION['host'] = $host;
+        $_SESSION['db'] = $db;
+        $_SESSION['user'] = $user;
+        $_SESSION['pass'] = $pass;
+
+        // Optional: You can still check if the user exists in usuarios table
+        try {
+            $stmt = $pdo->prepare("SELECT username, rol, nombre_completo FROM usuarios WHERE username = ?");
+            $stmt->execute([$user]);
+            $userRecord = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($userRecord) {
+                $_SESSION['rol'] = $userRecord['rol'];
+                $_SESSION['nombre_completo'] = $userRecord['nombre_completo'];
+            }
+        } catch (Exception $e) {
+            // If usuarios table doesn't exist or query fails, continue with basic info
+            $_SESSION['rol'] = 'Database User';
+            $_SESSION['nombre_completo'] = $user;
         }
 
+        header("Location: dashboard.php");
+        exit;
+
     } catch (Exception $e) {
-        echo "❌ Error de conexión: " . $e->getMessage();
+        $_SESSION['error'] = "Error de conexión: " . $e->getMessage();
+        header("Location: index.php");
+        exit;
     }
 }
+?>
