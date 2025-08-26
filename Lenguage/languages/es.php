@@ -718,6 +718,7 @@ return [
 
 // === INFORMACIÓN DE TABLAS ===
     'tables_found' => 'Tablas encontradas',
+    'health_indicator_tmp_tables'=> 'Tablas TMP',
 
 // === INFORMACIÓN ADICIONAL DE LA BASE DE DATOS ===
 
